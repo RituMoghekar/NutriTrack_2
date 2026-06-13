@@ -17,5 +17,5 @@
     "noUnusedLocals": false,
     "strictNullChecks": false
   },
-   "include": ["src"]
+   "include": ["src", "src/types"]
 }

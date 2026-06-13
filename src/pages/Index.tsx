@@ -82,7 +82,7 @@ const handleTryDemo = async () => {
   <Link to="/asha-login">
     <Button
       size="lg"
-      className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg shadow-md"
+      className="bg-purple-600 hover:bg-purple-700 text-white px-6 text-lg shadow-md"
     >
       🧑‍⚕️ For ASHA Workers
     </Button>
@@ -208,19 +208,34 @@ const handleTryDemo = async () => {
 
       {/* CTA Section */}
       <section className="bg-gradient-to-r from-green-600 to-green-500 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            🌟 "Ready to Transform Your Family's Nutrition?"
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            "Join thousands of families already eating better with NutriTrack 🧘‍♀️🍏👨‍👩‍👧‍👦"          </p>
-          <Link to="/auth">
-            <Button size="lg" variant="secondary" className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold">
-              🌍 "Start Your Journey Today"
-            </Button>
-          </Link>
-        </div>
-      </section>
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-4xl font-bold mb-4">
+      🌟 Ready to Transform Your Family's Nutrition?
+    </h2>
+    <p className="text-xl mb-8 opacity-90">
+      Join thousands of families already eating better with NutriTrack 🧘‍♀️🍏
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Link to="/auth">
+        <Button
+          size="lg"
+          className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+        >
+          🌍 Start Your Journey Today
+        </Button>
+      </Link>
+      <Link to="/contact">
+        <Button
+          variant="outline"
+          size="lg"
+          className="bg-white text-green-700 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+        >
+          📞 Contact Us
+        </Button>
+      </Link>
+    </div>
+  </div>
+</section>
 
       <footer className="bg-gray-900 text-white py-10 mt-10">
   <div className="container mx-auto px-4 text-center space-y-4">
@@ -238,11 +253,21 @@ const handleTryDemo = async () => {
     </p>
 
       
-    <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-  <Link to="/about" className="hover:text-white">About</Link>
-  <Link to="/faq" className="hover:text-white">FAQ</Link>
-  <Link to="/contact" className="hover:text-white">Contact</Link>
-  <Link to="/privacy" className="hover:text-white">Privacy Policy</Link>
+    <div className="flex flex-wrap justify-center gap-6 text-sm">
+  {[
+    { name: "About", path: "/about" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Contact", path: "/contact" },
+    { name: "Privacy Policy", path: "/privacy" },
+  ].map((link) => (
+    <Link
+      key={link.name}
+      to={link.path}
+      className="text-gray-400 hover:text-green-400 transition-colors"
+    >
+      {link.name}
+    </Link>
+  ))}
 </div>
   </div>
 </footer>

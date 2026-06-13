@@ -24,6 +24,8 @@ import AshaLogin from "@/pages/AshaLogin";
 import { TranslationProvider } from "@/contexts/TranslationContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import Grocery from "@/pages/Grocery";
+import FAQ from "@/pages/FAQ";
+import Contact from "@/pages/Contact";
 
 const queryClient = new QueryClient();
 
@@ -84,6 +86,8 @@ useEffect(() => {
           <Route path="/meal-planner" element={<MealPlanner />} />
           <Route path="/community" element={<Community />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/guess" element={<GuessNutrientPage />} />

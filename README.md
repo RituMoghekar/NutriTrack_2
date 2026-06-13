@@ -1,77 +1,307 @@
-<<<<<<< HEAD
-# Welcome to your Lovable project
+# NutriTrack 🥗
 
-## Project info
+NutriTrack is a full-stack nutrition and wellness platform designed to help users build healthier food habits through interactive meal planning, nutrition education, community support, and accessibility-focused features.
 
-**URL**: https://lovable.dev/projects/19543803-dd55-4a76-a1df-8d7d3c094117
+The application combines a modern React-based frontend with a Node.js/Express backend and MongoDB database integration to provide a responsive and user-friendly health companion.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+### 🥗 Smart Meal Planner
+- Personalized weekly meal planning interface
+- Breakfast, lunch, and dinner scheduling
+- Ingredient-based meal cards
+- Estimated meal cost calculation
+- Budget-friendly food alternatives
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/19543803-dd55-4a76-a1df-8d7d3c094117) and start prompting.
+### 🔊 Voice Assisted Nutrition
+- Text-to-speech support using browser Speech Synthesis API
+- Listen to:
+  - Meal summaries
+  - Cooking instructions
+  - Recipe details
 
-Changes made via Lovable will be committed automatically to this repo.
+### 🌐 Multilingual Support
+- Language switching support
+- Translation context management
+- Voice output based on selected language
 
-**Use your preferred IDE**
+### 🍳 Interactive Cooking Assistant
+- Step-by-step cooking workflow
+- Cooking checklist
+- Completion tracking
+- Celebration animation using confetti
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 📄 Meal Plan Export & Sharing
+- Generate weekly meal plan PDF
+- Share meal plans through WhatsApp
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🧠 Nutrition Learning Activities
+- Interactive nutrition quizzes
+- Memory matching activities
+- Build-a-plate learning module
+- Guess nutrient challenges
 
-Follow these steps:
+### 👩‍⚕️ Community Health Support
+- Community posts
+- Health-related discussions
+- Questions and answers
+- Health worker interaction support
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 📱 Progressive Web App Support
+- PWA configuration
+- Installable application support
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+# 🛠 Tech Stack
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## Frontend
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- ShadCN UI
+- React Router
+- React Query
+- Framer Motion
+- Zustand
+- Firebase integration
+- i18next internationalization
+
+## Backend
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- REST APIs
+- dotenv
+- CORS
+
+## Additional Libraries
+- html2canvas
+- jsPDF
+- canvas-confetti
+- Lucide Icons
+
+---
+
+# 📂 Project Structure
+
+```
+NutriTrack_2/
+
+│
+├── public/
+│   ├── sounds/              # Application audio files
+│   ├── stories/             # Educational nutrition videos
+│   └── PWA assets
+│
+├── src/
+│   │
+│   ├── components/          # Reusable React components
+│   │   ├── Header.tsx
+│   │   ├── Quiz.tsx
+│   │   ├── BuildAPlateCard.tsx
+│   │   ├── MemoryMatchCard.tsx
+│   │   └── UI components
+│   │
+│   ├── contexts/
+│   │   ├── AuthContext.tsx
+│   │   └── TranslationContext.tsx
+│   │
+│   ├── data/
+│   │   └── Static application data
+│   │
+│   ├── hooks/
+│   │   └── Custom React hooks
+│   │
+│   ├── pages/
+│   │   └── Application pages
+│   │
+│   ├── firebase.ts
+│   ├── i18n.ts
+│   └── App.tsx
+│
+├── server/
+│   │
+│   ├── models/
+│   │   ├── Post.js
+│   │   └── Question.js
+│   │
+│   ├── routes/
+│   │   ├── posts.js
+│   │   └── questions.js
+│   │
+│   └── server.js
+│
+├── package.json
+└── README.md
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## Clone Repository
+
+```bash
+git clone <repository-url>
+
+cd NutriTrack_2
+```
+
+---
+
+# Frontend Setup
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Frontend runs on:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Backend Setup
 
-## What technologies are used for this project?
+Move into server folder:
 
-This project is built with:
+```bash
+cd server
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Install dependencies:
 
-## How can I deploy this project?
+```bash
+npm install
+```
 
-Simply open [Lovable](https://lovable.dev/projects/19543803-dd55-4a76-a1df-8d7d3c094117) and click on Share -> Publish.
+Create `.env` file:
 
-## Can I connect a custom domain to my Lovable project?
+```
+MONGO_URI=your_mongodb_connection_string
+```
 
-Yes, you can!
+Start backend:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```bash
+npm start
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
-=======
-# NutriTrack_2
->>>>>>> a0fe3bdfbcca930d39001c0fbc15bbd5373cc31f
+Backend runs using Express server.
+
+---
+
+# 🔌 Backend API Modules
+
+## Posts API
+
+### Get posts
+
+```
+GET /api/posts
+```
+
+### Create post
+
+```
+POST /api/posts
+```
+
+---
+
+## Questions API
+
+### Get questions
+
+```
+GET /api/questions
+```
+
+### Ask question
+
+```
+POST /api/questions
+```
+
+### Add answer
+
+```
+POST /api/questions/:id/answer
+```
+
+---
+
+# 🔐 Environment Variables
+
+Create:
+
+```
+.env
+```
+
+Example:
+
+```
+MONGO_URI=your_database_url
+```
+
+Do not upload `.env` files to GitHub.
+
+---
+
+# 🚀 Running the Complete Project
+
+Open two terminals.
+
+Terminal 1:
+
+```bash
+npm run dev
+```
+
+Terminal 2:
+
+```bash
+cd server
+npm start
+```
+
+---
+
+# 🎯 Project Highlights (Resume)
+
+- Developed a full-stack nutrition and wellness platform using React, TypeScript, Node.js, Express, and MongoDB.
+- Implemented interactive meal planning, voice-assisted cooking guidance, multilingual support, and nutrition learning modules.
+- Built REST APIs for community posts and health-related discussions.
+- Integrated PDF generation, browser speech synthesis, animations, and responsive UI components.
+
+---
+
+# Future Improvements
+
+- AI-based personalized diet recommendation
+- Nutrition tracking dashboard
+- User authentication improvements
+- Cloud deployment
+- Real-time community updates
+
+---
+
+## Author
+
+Developed as a full-stack web application project.

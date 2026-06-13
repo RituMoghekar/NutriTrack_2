@@ -281,12 +281,11 @@ const mealTimeLabel = {
 >
   <Volume2 className="w-4 h-4 mr-2" /> Listen
 </Button>
-              <Button
-  className="flex-1 bg-green-600 hover:bg-green-700"
-  disabled={!voicesReady}
-  onClick={() => speakRecipeFromScreen(lang)}
+ <Button
+  className="flex-1 bg-lime-600 hover:bg-lime-700"
+  onClick={() => setSelectedMeal(meal)}
 >
-  <Volume2 className="w-4 h-4 mr-2" /> Listen
+  <Utensils className="w-4 h-4 mr-2" /> Start Cooking
 </Button>
                 </div>
               </CardContent>
@@ -414,9 +413,11 @@ const mealTimeLabel = {
 </ol>
               </div>
               <div className="flex gap-2 pt-2">
-                <Button className="flex-1 bg-green-600 hover:bg-green-700"
-                        disabled={!voicesReady}
-                        onClick={()=>speakRecipe(selectedMeal)}>
+                <Button 
+                  className="flex-1 bg-green-600 hover:bg-green-700"
+                  disabled={!voicesReady}
+                  onClick={() => speakRecipeFromScreen(lang)}
+                >
                   <Volume2 className="w-4 h-4 mr-2"/> Listen
                 </Button>
                 <Button className="flex-1" variant="outline"
